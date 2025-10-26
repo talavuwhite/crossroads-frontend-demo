@@ -1,0 +1,16 @@
+.rbc-event-label {
+  display: none !important;
+}
+
+.rbc-agenda-view table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #fccee8;
+}
+
+.rbc-agenda-view th,
+.rbc-agenda-view td {
+  border: 1px solid #fccee8;
+  padding: 8px;
+  text-align: left;
+}

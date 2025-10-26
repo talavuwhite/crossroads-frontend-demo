@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Lucida Grande", Helvetica, Sans !important;
+}
+
+@theme {
+  --color-primary: #fd051c;
+  --color-purple: #8f6ed5;
+  --color-green: #4a7c7c;
+  --color-greenLight: #bfe4e6;
+  --color-purpleLight: #f5f3fa;
+  --color-pink: #b83484;
+  --color-border: #e5e0f7;
+}
+.font {
+  font-family: "Lucida Grande", Helvetica, Sans !important;
+}
+.helvi-font {
+  font-family: helvetica, arial, sans-serif !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+
+  @media (max-width: 1024px) {
+    .mobile-scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .mobile-scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+button {
+  cursor: pointer;
+}
+
+.react-datepicker__input-container input:focus {
+  outline: none;
+  border-color: #a259e6; /* or your desired purple */
+  box-shadow: 0 0 0 2px #e9d8fd; /* optional, for a subtle glow */
+}
+
+/* DatePicker Modal Fix */
+.datepicker-modal-fix {
+  z-index: 9999 !important;
+}
+
+.react-datepicker-popper {
+  z-index: 9999 !important;
+}
+
+.react-datepicker {
+  z-index: 9999 !important;
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+@keyframes scan {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+
+.animate-scan {
+  animation: scan 2s linear infinite;
+}
