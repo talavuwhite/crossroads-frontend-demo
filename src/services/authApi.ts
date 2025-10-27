@@ -25,7 +25,7 @@ export interface BackendUserData {
 export const sendOTP = async (email: string): Promise<AuthResponse> => {
   try {
     const response = await backendApi.post<ApiResponse<any>>(
-      "/api/auth/send-otp",
+      "/auth/send-otp",
       {
         email,
       }
@@ -48,7 +48,7 @@ export const verifyOTP = async (
 ): Promise<AuthResponse> => {
   try {
     const response = await backendApi.post<ApiResponse<BackendUserData>>(
-      "/api/auth/verify-otp",
+      "/auth/verify-otp",
       {
         email,
         otp,
@@ -69,7 +69,7 @@ export const verifyOTP = async (
 export const resendOTP = async (email: string): Promise<AuthResponse> => {
   try {
     const response = await backendApi.post<ApiResponse<any>>(
-      "/api/auth/resend-otp",
+      "/auth/resend-otp",
       {
         email,
       }
@@ -88,7 +88,7 @@ export const resendOTP = async (email: string): Promise<AuthResponse> => {
 
 export const logout = async (): Promise<void> => {
   try {
-    await backendApi.post("/api/auth/logout");
+    await backendApi.post("/auth/logout");
     // Redux persist will handle clearing user data automatically
   } catch (error: any) {
     console.error("Logout error:", error);
